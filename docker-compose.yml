@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  tendermint_abci:
+    build: ./app
+    image: tendermint_abci
+    container_name: tendermint_abci
+    command: "python app.py"
+    volumes:
+      - ./app:/usr/app
+
+
+  tendermint_init:
+    image: tendermint/tendermint:v0.33.6
+    container_name: tendermint_init
+    restart: always
+    command: "init"
+    volumes:
+      - ./tendermint/data:/tendermint
+
+  tendermint_core:
+    image: tendermint/tendermint:v0.33.6
+    container_name: tendermint_core
+    depends_on:
+      - tendermint_init
+      - tendermint_abci
+    restart: always
+    command: "node"
+    volumes:
+      - ./tendermint/data:/tendermint
+    ports:
+      - 26656:26656
+      - 26657:26657
