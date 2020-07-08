@@ -2,30 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15a73e48-8f9c-4547-9bca-a1bf631c49c1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tendermint/data/config/addrbook.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/config/addrbook.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tendermint/data/data/blockstore.db/000002.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tendermint/data/data/blockstore.db/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/blockstore.db/CURRENT" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tendermint/data/data/blockstore.db/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/blockstore.db/LOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tendermint/data/data/blockstore.db/MANIFEST-000003" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tendermint/data/data/cs.wal/wal" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/cs.wal/wal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tendermint/data/data/evidence.db/000001.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tendermint/data/data/evidence.db/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/evidence.db/CURRENT" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tendermint/data/data/evidence.db/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/evidence.db/LOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tendermint/data/data/evidence.db/MANIFEST-000000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tendermint/data/data/priv_validator_state.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/priv_validator_state.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tendermint/data/data/state.db/000002.ldb" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/state.db/000002.ldb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tendermint/data/data/state.db/000003.log" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/state.db/000003.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tendermint/data/data/state.db/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/state.db/LOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tendermint/data/data/state.db/MANIFEST-000004" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/state.db/MANIFEST-000004" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tendermint/data/data/tx_index.db/000001.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tendermint/data/data/tx_index.db/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/tx_index.db/CURRENT" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tendermint/data/data/tx_index.db/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/tx_index.db/LOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tendermint/data/data/tx_index.db/MANIFEST-000000" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594192662187</updated>
-      <workItem from="1594192663902" duration="4901000" />
+      <workItem from="1594192663902" duration="4923000" />
     </task>
     <servers />
   </component>
