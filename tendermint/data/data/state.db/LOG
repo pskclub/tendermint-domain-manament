@@ -1,16 +1,16 @@
 =============== Jul 8, 2020 (UTC) ===============
-06:41:55.283987 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-06:41:55.291327 db@open opening
-06:41:55.296687 version@stat F·[] S·0B[] Sc·[]
-06:41:55.300158 db@janitor F·2 G·0
-06:41:55.300652 db@open done T·8.7911ms
+09:25:20.212822 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:25:20.220656 db@open opening
+09:25:20.223521 version@stat F·[] S·0B[] Sc·[]
+09:25:20.226301 db@janitor F·2 G·0
+09:25:20.226742 db@open done T·5.7164ms
 =============== Jul 8, 2020 (UTC) ===============
-06:42:31.317342 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-06:42:31.323691 version@stat F·[] S·0B[] Sc·[]
-06:42:31.324604 db@open opening
-06:42:31.326188 journal@recovery F·1
-06:42:31.326570 journal@recovery recovering @1
-06:42:31.332847 memdb@flush created L0@2 N·5 S·760B "con..y:1,v4":"val..y:2,v3"
-06:42:31.334935 version@stat F·[1] S·760B[760B] Sc·[0.25]
-06:42:31.348114 db@janitor F·3 G·0
-06:42:31.348480 db@open done T·23.463ms
+09:29:13.664909 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:29:13.671344 version@stat F·[] S·0B[] Sc·[]
+09:29:13.672166 db@open opening
+09:29:13.673886 journal@recovery F·1
+09:29:13.674409 journal@recovery recovering @1
+09:29:13.681008 memdb@flush created L0@2 N·29 S·1KiB "abc..y:1,v10":"val..y:7,v27"
+09:29:13.682726 version@stat F·[1] S·1KiB[1KiB] Sc·[0.25]
+09:29:13.694268 db@janitor F·3 G·0
+09:29:13.694569 db@open done T·22.0422ms

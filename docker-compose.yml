@@ -5,9 +5,8 @@ services:
     build: ./app
     image: tendermint_abci
     container_name: tendermint_abci
-    command: "python app.py"
-    volumes:
-      - ./app:/usr/app
+    ports:
+      - 26658:26658
 
 
   tendermint_init:

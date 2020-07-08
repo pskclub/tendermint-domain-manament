@@ -1,15 +1,16 @@
 =============== Jul 8, 2020 (UTC) ===============
-06:41:55.262087 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-06:41:55.270090 db@open opening
-06:41:55.273200 version@stat F·[] S·0B[] Sc·[]
-06:41:55.275728 db@janitor F·2 G·0
-06:41:55.276134 db@open done T·5.7354ms
+09:25:20.187095 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:25:20.194994 db@open opening
+09:25:20.206205 version@stat F·[] S·0B[] Sc·[]
+09:25:20.208864 db@janitor F·2 G·0
+09:25:20.209253 db@open done T·6.2282ms
 =============== Jul 8, 2020 (UTC) ===============
-06:42:31.285739 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-06:42:31.291992 version@stat F·[] S·0B[] Sc·[]
-06:42:31.293608 db@open opening
-06:42:31.295990 journal@recovery F·1
-06:42:31.297837 journal@recovery recovering @1
-06:42:31.301767 version@stat F·[] S·0B[] Sc·[]
-06:42:31.314210 db@janitor F·2 G·0
-06:42:31.314541 db@open done T·20.5118ms
+09:29:13.635989 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:29:13.641787 version@stat F·[] S·0B[] Sc·[]
+09:29:13.642404 db@open opening
+09:29:13.643724 journal@recovery F·1
+09:29:13.644381 journal@recovery recovering @1
+09:29:13.649292 memdb@flush created L0@2 N·30 S·3KiB ",v30":"blo..ore,v5"
+09:29:13.650662 version@stat F·[1] S·3KiB[3KiB] Sc·[0.25]
+09:29:13.661278 db@janitor F·3 G·0
+09:29:13.661565 db@open done T·18.824ms

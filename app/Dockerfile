@@ -1,12 +1,9 @@
-FROM python:3.7.3-alpine
-ENV PYTHONUNBUFFERED 1
-ENV WORKDIR /usr/app
+FROM golang:1.14.4-alpine3.12
 
-RUN apk add --update --upgrade --no-cache bash mariadb-connector-c gmp
-RUN apk add --no-cache --virtual .build-deps python3-dev mariadb-dev build-base gmp-dev
+RUN apk --no-cache add ca-certificates
 
-WORKDIR ${WORKDIR}
-ADD ./requirements.txt .
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-RUN apk del .build-deps
+WORKDIR /go/src/github.com/pskclub/tendermint-domain-manament/app
+ADD . /go/src/github.com/pskclub/tendermint-domain-manament/app
+RUN go build
+RUN ls
+CMD ./app

@@ -1,6 +1,16 @@
 =============== Jul 8, 2020 (UTC) ===============
-06:42:31.359580 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-06:42:31.366972 db@open opening
-06:42:31.370919 version@stat F·[] S·0B[] Sc·[]
-06:42:31.373524 db@janitor F·2 G·0
-06:42:31.373967 db@open done T·6.61ms
+09:25:20.240482 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:25:20.247774 db@open opening
+09:25:20.250742 version@stat F·[] S·0B[] Sc·[]
+09:25:20.253285 db@janitor F·2 G·0
+09:25:20.253640 db@open done T·5.609ms
+=============== Jul 8, 2020 (UTC) ===============
+09:29:13.703638 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:29:13.709789 version@stat F·[] S·0B[] Sc·[]
+09:29:13.710523 db@open opening
+09:29:13.712058 journal@recovery F·1
+09:29:13.713409 journal@recovery recovering @1
+09:29:13.718611 memdb@flush created L0@2 N·2 S·198B "K\xf5\x12..\x85E\x9a,v1":"\xdb\xc1\xb4..Wن,v2"
+09:29:13.719786 version@stat F·[1] S·198B[198B] Sc·[0.25]
+09:29:13.733963 db@janitor F·3 G·0
+09:29:13.734511 db@open done T·23.5465ms
