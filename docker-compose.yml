@@ -13,7 +13,6 @@ services:
   tendermint_init:
     image: tendermint/tendermint:v0.32.8
     container_name: tendermint_init
-    restart: always
     command: "init"
     volumes:
       - ./tendermint/data:/tendermint
