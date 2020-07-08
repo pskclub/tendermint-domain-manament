@@ -11,7 +11,7 @@ services:
 
 
   tendermint_init:
-    image: tendermint/tendermint:v0.33.6
+    image: tendermint/tendermint:v0.32.8
     container_name: tendermint_init
     restart: always
     command: "init"
@@ -19,7 +19,7 @@ services:
       - ./tendermint/data:/tendermint
 
   tendermint_core:
-    image: tendermint/tendermint:v0.33.6
+    image: tendermint/tendermint:v0.32.8
     container_name: tendermint_core
     depends_on:
       - tendermint_init

@@ -1,6 +1,6 @@
 =============== Jul 8, 2020 (UTC) ===============
-06:23:29.732925 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-06:23:29.742791 db@open opening
-06:23:29.745315 version@stat F·[] S·0B[] Sc·[]
-06:23:29.747700 db@janitor F·2 G·0
-06:23:29.748284 db@open done T·5.0711ms
+06:42:31.420848 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+06:42:31.428952 db@open opening
+06:42:31.431549 version@stat F·[] S·0B[] Sc·[]
+06:42:31.434400 db@janitor F·2 G·0
+06:42:31.434712 db@open done T·5.3711ms
