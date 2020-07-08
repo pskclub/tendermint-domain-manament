@@ -13,3 +13,39 @@
 09:29:13.775652 version@stat F·[] S·0B[] Sc·[]
 09:29:13.794029 db@janitor F·2 G·0
 09:29:13.794544 db@open done T·29.9428ms
+=============== Jul 8, 2020 (UTC) ===============
+10:07:20.305813 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:07:20.312113 version@stat F·[] S·0B[] Sc·[]
+10:07:20.312830 db@open opening
+10:07:20.314189 journal@recovery F·1
+10:07:20.314837 journal@recovery recovering @2
+10:07:20.318341 version@stat F·[] S·0B[] Sc·[]
+10:07:20.329646 db@janitor F·2 G·0
+10:07:20.330014 db@open done T·16.8446ms
+=============== Jul 8, 2020 (UTC) ===============
+11:04:45.152449 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:04:45.158835 version@stat F·[] S·0B[] Sc·[]
+11:04:45.159551 db@open opening
+11:04:45.161467 journal@recovery F·1
+11:04:45.162864 journal@recovery recovering @4
+11:04:45.166530 version@stat F·[] S·0B[] Sc·[]
+11:04:45.177698 db@janitor F·2 G·0
+11:04:45.178278 db@open done T·18.4622ms
+=============== Jul 8, 2020 (UTC) ===============
+11:11:46.811114 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:11:46.816118 version@stat F·[] S·0B[] Sc·[]
+11:11:46.816662 db@open opening
+11:11:46.817782 journal@recovery F·1
+11:11:46.818867 journal@recovery recovering @6
+11:11:46.822434 version@stat F·[] S·0B[] Sc·[]
+11:11:46.830999 db@janitor F·2 G·0
+11:11:46.831216 db@open done T·14.3077ms
+=============== Jul 8, 2020 (UTC) ===============
+11:13:32.327255 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+11:13:32.334416 version@stat F·[] S·0B[] Sc·[]
+11:13:32.335291 db@open opening
+11:13:32.337830 journal@recovery F·1
+11:13:32.339167 journal@recovery recovering @8
+11:13:32.342829 version@stat F·[] S·0B[] Sc·[]
+11:13:32.355287 db@janitor F·2 G·0
+11:13:32.355646 db@open done T·19.9143ms

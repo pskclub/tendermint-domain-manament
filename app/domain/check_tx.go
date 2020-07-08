@@ -8,7 +8,8 @@ import (
 )
 
 func checkTX(app *Application, req types.RequestCheckTx) types.ResponseCheckTx {
-	fmt.Println("CheckTx eiei")
+	fmt.Println(fmt.Sprintf("Invalid nonce. Expected >= %v, got %v", app.txCount, string(req.Tx)))
+	fmt.Println(req.Type)
 	if app.serial {
 		if len(req.Tx) > 8 {
 			return types.ResponseCheckTx{
