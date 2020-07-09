@@ -8,6 +8,7 @@ import (
 	"github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/libs/common"
 	"strconv"
+	"time"
 )
 
 func deliverTX(app *Application, req types.RequestDeliverTx) types.ResponseDeliverTx {
@@ -38,6 +39,7 @@ func deliverTX(app *Application, req types.RequestDeliverTx) types.ResponseDeliv
 		},
 	}
 
+	tx.CreatedAt = time.Now()
 	app.db.Create(tx)
 	utils.LogStruct(tx)
 	return types.ResponseDeliverTx{Code: code.CodeTypeOK, Events: events}
