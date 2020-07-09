@@ -1,2 +1,3 @@
 tendermint unsafe_reset_all
 ls
+unsafe_reset_all

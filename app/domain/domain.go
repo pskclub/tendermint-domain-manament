@@ -20,6 +20,10 @@ func (app *Application) SetOption(req types.RequestSetOption) types.ResponseSetO
 	return types.ResponseSetOption{}
 }
 
+func (app *Application) InitChain(req types.RequestInitChain) types.ResponseInitChain {
+	return initChain(app, req)
+}
+
 func (app *Application) Info(req types.RequestInfo) types.ResponseInfo {
 	return info(app, req)
 }

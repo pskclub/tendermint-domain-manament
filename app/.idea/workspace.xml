@@ -2,20 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15a73e48-8f9c-4547-9bca-a1bf631c49c1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/check_tx.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/check_tx.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/commit.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/commit.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/deliver_tx.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/deliver_tx.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/domain.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/domain.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/info.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/query.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/query.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tendermint/data/.bash_history" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/.bash_history" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tendermint/data/config/addrbook.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/config/addrbook.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tendermint/data/data/blockstore.db/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/blockstore.db/CURRENT" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tendermint/data/data/blockstore.db/CURRENT.bak" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/blockstore.db/CURRENT.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tendermint/data/data/blockstore.db/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/blockstore.db/LOG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tendermint/data/data/cs.wal/wal" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/cs.wal/wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tendermint/data/data/evidence.db/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/evidence.db/CURRENT" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tendermint/data/data/evidence.db/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/evidence.db/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tendermint/data/data/priv_validator_state.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/priv_validator_state.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tendermint/data/data/state.db/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/state.db/CURRENT" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tendermint/data/data/state.db/CURRENT.bak" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/state.db/CURRENT.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tendermint/data/data/state.db/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/state.db/LOG" afterDir="false" />
