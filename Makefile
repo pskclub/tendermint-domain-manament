@@ -8,3 +8,5 @@ logs-abci:
 	 docker logs tendermint_abci -f
 exec:
 	docker exec -it tendermint_core bash
+exec-app:
+	docker exec -it tendermint_abci bash

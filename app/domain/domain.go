@@ -1,6 +1,7 @@
 package domain
 
 import (
+	"github.com/jinzhu/gorm"
 	"github.com/tendermint/tendermint/abci/types"
 )
 
@@ -8,29 +9,14 @@ type Application struct {
 	types.BaseApplication
 
 	hashCount int
-	txCount   int
-	serial    bool
+	db        *gorm.DB
 }
 
-func NewApplication(serial bool) *Application {
-	return &Application{serial: serial}
+func NewApplication(db *gorm.DB) *Application {
+	return &Application{db: db}
 }
 
 func (app *Application) SetOption(req types.RequestSetOption) types.ResponseSetOption {
-	key, value := req.Key, req.Value
-	if key == "serial" && value == "on" {
-		app.serial = true
-	} else {
-		/*
-			TODO Panic and have the ABCI server pass an exception.
-			The client can call SetOptionSync() and get an `error`.
-			return types.ResponseSetOption{
-				Error: fmt.Sprintf("Unknown key (%s) or value (%s)", key, value),
-			}
-		*/
-		return types.ResponseSetOption{}
-	}
-
 	return types.ResponseSetOption{}
 }
 

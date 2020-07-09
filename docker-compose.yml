@@ -7,6 +7,8 @@ services:
     container_name: tendermint_abci
     ports:
       - 26658:26658
+    depends_on:
+      - db
 
 
   tendermint_init:
@@ -29,3 +31,16 @@ services:
     ports:
       - 26656:26656
       - 26657:26657
+
+
+  db:
+    image: mariadb:10.5.4
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: my_password
+      MYSQL_PASSWORD: my_password
+      MYSQL_DATABASE: my_database
+      MYSQL_USER: my_user
+    ports:
+      - 3306:3306
+

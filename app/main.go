@@ -3,12 +3,12 @@ package main
 import (
 	"flag"
 	"fmt"
+	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"github.com/pskclub/tendermint-domain-manament/app/domain"
 	"os"
 	"os/signal"
 	"syscall"
-
-	"github.com/dgraph-io/badger"
 
 	abciserver "github.com/tendermint/tendermint/abci/server"
 	"github.com/tendermint/tendermint/libs/log"
@@ -21,14 +21,14 @@ func init() {
 }
 
 func main() {
-	db, err := badger.Open(badger.DefaultOptions("/tmp/badger"))
+	db, err := gorm.Open("mysql", "my_user:my_password@(db:3306)/my_database?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "failed to open badger db: %v", err)
+		fmt.Fprintf(os.Stderr, "%v", err)
 		os.Exit(1)
 	}
 	defer db.Close()
-	app := domain.NewApplication(false)
 
+	app := domain.NewApplication(db)
 	flag.Parse()
 
 	logger := log.NewTMLogger(log.NewSyncWriter(os.Stdout))
