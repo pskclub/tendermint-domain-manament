@@ -2,6 +2,7 @@ package domain
 
 import (
 	"fmt"
+	"github.com/jinzhu/gorm"
 	"github.com/pskclub/tendermint-domain-manament/app/domain/models"
 	"github.com/pskclub/tendermint-domain-manament/app/utils"
 	"github.com/tendermint/tendermint/abci/example/code"
@@ -31,6 +32,16 @@ func checkTX(app *Application, req types.RequestCheckTx) types.ResponseCheckTx {
 
 	if utils.IsEmpty(data.Operation) {
 		return types.ResponseCheckTx{Code: code.CodeTypeEncodingError, Log: "Operation is required"}
+	}
+
+	checkNonce := &models.Tx{}
+	result := app.db.Where("nonce = ?", data.Nonce).Find(checkNonce)
+	if !gorm.IsRecordNotFoundError(result.Error) {
+		return types.ResponseCheckTx{Code: code.CodeTypeBadNonce, Log: "Nonce already exits"}
+	}
+
+	if result.Error != nil {
+		return types.ResponseCheckTx{Code: code.CodeTypeBadNonce, Log: "DB error"}
 	}
 
 	return types.ResponseCheckTx{Code: code.CodeTypeOK, Log: fmt.Sprintf("%v", data)}

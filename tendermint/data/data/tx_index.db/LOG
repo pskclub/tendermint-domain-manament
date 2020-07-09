@@ -124,3 +124,41 @@
 10:07:33.530355 version@stat F·[2 1] S·1KiB[668B 711B] Sc·[0.50 0.00]
 10:07:33.543733 db@janitor F·5 G·0
 10:07:33.544146 db@open done T·23.2175ms
+=============== Jul 9, 2020 (UTC) ===============
+10:17:16.297732 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:17:16.304000 version@stat F·[2 1] S·1KiB[668B 711B] Sc·[0.50 0.00]
+10:17:16.304583 db@open opening
+10:17:16.306499 journal@recovery F·1
+10:17:16.307317 journal@recovery recovering @30
+10:17:16.312310 memdb@flush created L0@32 N·6 S·377B "app..9/0,v39":"\xe2Li..\xe1}\xab,v42"
+10:17:16.313260 version@stat F·[3 1] S·1KiB[1KiB 711B] Sc·[0.75 0.00]
+10:17:16.324379 db@janitor F·6 G·0
+10:17:16.324745 db@open done T·19.8574ms
+=============== Jul 9, 2020 (UTC) ===============
+10:20:04.347975 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:20:04.354359 version@stat F·[3 1] S·1KiB[1KiB 711B] Sc·[0.75 0.00]
+10:20:04.355041 db@open opening
+10:20:04.357063 journal@recovery F·1
+10:20:04.357776 journal@recovery recovering @33
+10:20:04.363401 memdb@flush created L0@35 N·6 S·381B "app..0/0,v46":"\xe2Li..\xe1}\xab,v49"
+10:20:04.364950 version@stat F·[4 1] S·2KiB[1KiB 711B] Sc·[1.00 0.00]
+10:20:04.377480 db@janitor F·7 G·0
+10:20:04.377854 db@open done T·22.5834ms
+10:20:04.378029 table@compaction L0·3 -> L1·1 S·1KiB Q·50
+10:20:04.386030 table@build created L1@38 N·38 S·865B "app..0/0,v46":"\xea7\x11..[\xff\xf8,v14"
+10:20:04.386415 version@stat F·[1 1] S·1KiB[291B 865B] Sc·[0.25 0.00]
+10:20:04.387424 table@compaction committed F-3 S-981B Ke·0 D·3 T·8.7396ms
+10:20:04.388337 table@remove removed @32
+10:20:04.389613 table@remove removed @29
+10:20:04.391102 table@remove removed @18
+=============== Jul 9, 2020 (UTC) ===============
+10:21:38.957978 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:21:38.964447 version@stat F·[1 1] S·1KiB[291B 865B] Sc·[0.25 0.00]
+10:21:38.965099 db@open opening
+10:21:38.966760 journal@recovery F·1
+10:21:38.968047 journal@recovery recovering @36
+10:21:38.972578 memdb@flush created L0@39 N·6 S·379B "app..1/0,v53":"\xe2Li..\xe1}\xab,v56"
+10:21:38.973732 version@stat F·[2 1] S·1KiB[670B 865B] Sc·[0.50 0.00]
+10:21:38.985779 db@janitor F·6 G·1
+10:21:38.986141 db@janitor removing table-35
+10:21:38.987155 db@open done T·21.804ms
