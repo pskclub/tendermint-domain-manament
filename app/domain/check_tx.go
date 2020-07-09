@@ -36,13 +36,9 @@ func checkTX(app *Application, req types.RequestCheckTx) types.ResponseCheckTx {
 
 	checkNonce := &models.Tx{}
 	result := app.db.Where("nonce = ?", data.Nonce).Find(checkNonce)
-	if !gorm.IsRecordNotFoundError(result.Error) {
-		return types.ResponseCheckTx{Code: code.CodeTypeBadNonce, Log: "Nonce already exits"}
+	if result.Error != nil && gorm.IsRecordNotFoundError(result.Error) {
+		return types.ResponseCheckTx{Code: code.CodeTypeOK, Log: fmt.Sprintf("%v", data)}
 	}
 
-	if result.Error != nil {
-		return types.ResponseCheckTx{Code: code.CodeTypeBadNonce, Log: "DB error"}
-	}
-
-	return types.ResponseCheckTx{Code: code.CodeTypeOK, Log: fmt.Sprintf("%v", data)}
+	return types.ResponseCheckTx{Code: code.CodeTypeBadNonce, Log: "Nonce already exits"}
 }

@@ -165,3 +165,31 @@
 10:21:35.900433 db@janitor F·5 G·1
 10:21:35.900814 db@janitor removing table-36
 10:21:35.901772 db@open done T·20.0041ms
+=============== Jul 9, 2020 (UTC) ===============
+10:24:30.885050 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:24:30.893193 version@stat F·[1 1] S·9KiB[953B 8KiB] Sc·[0.25 0.00]
+10:24:30.894151 db@open opening
+10:24:30.896917 journal@recovery F·1
+10:24:30.897899 journal@recovery recovering @41
+10:24:30.901756 version@stat F·[1 1] S·9KiB[953B 8KiB] Sc·[0.25 0.00]
+10:24:30.917237 db@janitor F·4 G·0
+10:24:30.917580 db@open done T·23.0731ms
+=============== Jul 9, 2020 (UTC) ===============
+10:29:45.980221 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:29:45.985175 version@stat F·[1 1] S·9KiB[953B 8KiB] Sc·[0.25 0.00]
+10:29:45.985664 db@open opening
+10:29:45.986659 journal@recovery F·1
+10:29:45.986991 journal@recovery recovering @43
+10:29:45.989316 version@stat F·[1 1] S·9KiB[953B 8KiB] Sc·[0.25 0.00]
+10:29:45.998568 db@janitor F·4 G·0
+10:29:45.998904 db@open done T·12.9822ms
+=============== Jul 9, 2020 (UTC) ===============
+10:32:27.066872 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:32:27.077538 version@stat F·[1 1] S·9KiB[953B 8KiB] Sc·[0.25 0.00]
+10:32:27.078278 db@open opening
+10:32:27.080037 journal@recovery F·1
+10:32:27.080992 journal@recovery recovering @45
+10:32:27.084946 memdb@flush created L0@47 N·6 S·955B ",v81":"blo..ore,v80"
+10:32:27.085947 version@stat F·[2 1] S·10KiB[1KiB 8KiB] Sc·[0.50 0.00]
+10:32:27.098666 db@janitor F·5 G·0
+10:32:27.099053 db@open done T·20.3397ms
