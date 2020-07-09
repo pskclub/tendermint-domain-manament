@@ -313,6 +313,7 @@ index_keys = ""
 # precedence over IndexAllKeys (i.e. when given both, IndexKeys will be
 # indexed).
 index_all_keys = true
+index_all_tags = true
 
 ##### instrumentation configuration options #####
 [instrumentation]

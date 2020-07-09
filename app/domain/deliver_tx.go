@@ -36,5 +36,6 @@ func deliverTX(app *Application, req types.RequestDeliverTx) types.ResponseDeliv
 			},
 		},
 	})
+	utils.LogStruct(tx)
 	return types.ResponseDeliverTx{Code: code.CodeTypeOK, Events: events}
 }

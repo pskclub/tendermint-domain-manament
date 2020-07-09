@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="15a73e48-8f9c-4547-9bca-a1bf631c49c1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/deliver_tx.go" beforeDir="false" afterPath="$PROJECT_DIR$/domain/deliver_tx.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tendermint/data/config/addrbook.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/config/addrbook.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tendermint/data/config/config.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/config/config.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../tendermint/data/data/blockstore.db/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/../tendermint/data/data/blockstore.db/CURRENT" afterDir="false" />
@@ -89,7 +89,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1594192662187</updated>
-      <workItem from="1594192663902" duration="6435000" />
+      <workItem from="1594192663902" duration="7082000" />
     </task>
     <servers />
   </component>

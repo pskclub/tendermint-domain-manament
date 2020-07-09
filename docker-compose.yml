@@ -5,6 +5,7 @@ services:
     build: ./app
     image: tendermint_abci
     container_name: tendermint_abci
+    restart: always
     ports:
       - 26658:26658
     depends_on:
@@ -36,6 +37,8 @@ services:
   db:
     image: mariadb:10.5.4
     restart: always
+    volumes:
+      - ./storage/mariadb:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: my_password
       MYSQL_PASSWORD: my_password
