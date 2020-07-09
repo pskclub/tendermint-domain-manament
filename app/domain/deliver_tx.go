@@ -14,28 +14,31 @@ func deliverTX(app *Application, req types.RequestDeliverTx) types.ResponseDeliv
 	fmt.Println("deliverTX...")
 	tx := &models.Tx{}
 	utils.JSONParse(req.Tx, tx)
-	events := make([]types.Event, 0)
-	events = append(events, types.Event{
-		Type: "app",
-		Attributes: []common.KVPair{
-			{
-				Key:   []byte("operation"),
-				Value: []byte(strconv.Itoa(tx.Operation)),
-			},
-			{
-				Key:   []byte("domain_name"),
-				Value: []byte(tx.DomainName),
-			},
-			{
-				Key:   []byte("by"),
-				Value: []byte(tx.By),
-			},
-			{
-				Key:   []byte("nonce"),
-				Value: []byte(tx.Nonce),
+	events := []types.Event{
+		{
+			Type: "app",
+			Attributes: []common.KVPair{
+				{
+					Key:   []byte("operation"),
+					Value: []byte(strconv.Itoa(tx.Operation)),
+				},
+				{
+					Key:   []byte("domain_name"),
+					Value: []byte(tx.DomainName),
+				},
+				{
+					Key:   []byte("by"),
+					Value: []byte(tx.By),
+				},
+				{
+					Key:   []byte("nonce"),
+					Value: []byte(tx.Nonce),
+				},
 			},
 		},
-	})
+	}
+
+	app.db.Create(tx)
 	utils.LogStruct(tx)
 	return types.ResponseDeliverTx{Code: code.CodeTypeOK, Events: events}
 }

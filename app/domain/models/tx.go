@@ -6,3 +6,7 @@ type Tx struct {
 	By         string `json:"by"`
 	Nonce      string `json:"nonce"`
 }
+
+func (Tx) TableName() string {
+	return "tx"
+}

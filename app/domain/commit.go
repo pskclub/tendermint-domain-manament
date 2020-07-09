@@ -7,6 +7,7 @@ import (
 
 func commit(app *Application) types.ResponseCommit {
 	fmt.Println("commit...")
+
 	app.hashCount++
 	hash := make([]byte, 8)
 	return types.ResponseCommit{Data: hash}
