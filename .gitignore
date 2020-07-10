@@ -1,3 +1,5 @@
 venv
 tendermint/data/data
 storage
+
+tendermint/data/.bash_history
