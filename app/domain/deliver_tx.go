@@ -42,7 +42,8 @@ func deliverTX(app *Application, req types.RequestDeliverTx) types.ResponseDeliv
 		},
 	}
 
-	tx.CreatedAt = time.Now()
+	t := new(time.Time)
+	tx.CreatedAt = *t
 	app.DB.Create(tx)
 	utils.LogStruct(tx)
 

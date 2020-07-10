@@ -1,6 +1,7 @@
 package domain
 
 import (
+	"github.com/imroc/req"
 	"github.com/jinzhu/gorm"
 	"github.com/tendermint/tendermint/abci/types"
 )
@@ -8,14 +9,15 @@ import (
 type Application struct {
 	types.BaseApplication
 
-	Size   int64  `json:"size"`
-	Hash   []byte `json:"hash"`
-	Height int64  `json:"height"`
-	DB     *gorm.DB
+	Size      int64  `json:"size"`
+	Hash      []byte `json:"hash"`
+	Height    int64  `json:"height"`
+	DB        *gorm.DB
+	Requester *req.Req
 }
 
 func NewApplication(db *gorm.DB) *Application {
-	return &Application{DB: db}
+	return &Application{DB: db, Requester: req.New()}
 }
 
 func (app *Application) SetOption(req types.RequestSetOption) types.ResponseSetOption {
@@ -44,4 +46,8 @@ func (app *Application) Commit() (resp types.ResponseCommit) {
 
 func (app *Application) Query(req types.RequestQuery) types.ResponseQuery {
 	return queryTX(app, req)
+}
+
+func (app *Application) EndBlock(req types.RequestEndBlock) types.ResponseEndBlock {
+	return endBlock(app, req)
 }

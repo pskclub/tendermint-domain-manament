@@ -6,6 +6,7 @@ import (
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"github.com/pskclub/tendermint-domain-manament/app/domain"
+	"github.com/robfig/cron/v3"
 	"os"
 	"os/signal"
 	"syscall"
@@ -40,6 +41,12 @@ func main() {
 		os.Exit(1)
 	}
 	defer server.Stop()
+
+	cr := cron.New()
+	cr.AddFunc("@every 10s", func() {
+		domain.AddTimeStamp(app)
+	})
+	cr.Start()
 
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, os.Interrupt, syscall.SIGTERM)

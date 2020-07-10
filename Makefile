@@ -11,4 +11,4 @@ logs-abci:
 exec:
 	docker exec -it tendermint_core bash
 exec-app:
-	docker exec -it tendermint_abci bash
+	docker exec -it tendermint_abci sh
