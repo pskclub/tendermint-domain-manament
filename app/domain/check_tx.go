@@ -51,5 +51,60 @@ func checkTX(app *Application, req types.RequestCheckTx) types.ResponseCheckTx {
 		}
 	}
 
-	return types.ResponseCheckTx{Code: code.CodeTypeOK, Log: utils.StructToString(data)}
+	find := &models.Tx{}
+	result = app.DB.Where("domain_name = ?", data.DomainName).Last(find)
+
+	if data.Operation == OperationReserve {
+		if gorm.IsRecordNotFoundError(result.Error) {
+			return types.ResponseCheckTx{Code: code.CodeTypeOK, Log: utils.StructToString(data)}
+		}
+
+		if result.Error != nil {
+			return types.ResponseCheckTx{Code: code.CodeTypeUnknownError, Log: result.Error.Error()}
+		}
+
+		if find.Operation == OperationRelease {
+			return types.ResponseCheckTx{Code: code.CodeTypeOK, Log: utils.StructToString(data)}
+		}
+
+	}
+
+	if data.Operation == OperationTransfer {
+		if utils.IsEmpty(data.Receiver) {
+			return types.ResponseCheckTx{Code: code.CodeTypeEncodingError, Log: "receiver is required"}
+		}
+
+		if gorm.IsRecordNotFoundError(result.Error) {
+			return types.ResponseCheckTx{Code: code.CodeTypeUnauthorized, Log: result.Error.Error()}
+		}
+
+		if result.Error != nil {
+			return types.ResponseCheckTx{Code: code.CodeTypeUnknownError, Log: result.Error.Error()}
+		}
+
+		if data.Owner == find.Owner && data.Owner != utils.GetString(find.Receiver) && (find.Operation == OperationTransfer || find.Operation == OperationReserve) {
+			return types.ResponseCheckTx{Code: code.CodeTypeOK, Log: utils.StructToString(data)}
+		}
+
+	}
+
+	if data.Operation == OperationRelease {
+		if gorm.IsRecordNotFoundError(result.Error) {
+			return types.ResponseCheckTx{Code: code.CodeTypeUnauthorized, Log: result.Error.Error()}
+		}
+
+		if result.Error != nil {
+			return types.ResponseCheckTx{Code: code.CodeTypeUnknownError, Log: result.Error.Error()}
+		}
+
+		if find.Operation == OperationTransfer && data.Owner == utils.GetString(find.Receiver) {
+			return types.ResponseCheckTx{Code: code.CodeTypeOK, Log: utils.StructToString(data)}
+		}
+
+		if find.Operation == OperationReserve && data.Owner == find.Owner {
+			return types.ResponseCheckTx{Code: code.CodeTypeOK, Log: utils.StructToString(data)}
+		}
+	}
+
+	return types.ResponseCheckTx{Code: code.CodeTypeUnauthorized, Log: utils.StructToString(data)}
 }
