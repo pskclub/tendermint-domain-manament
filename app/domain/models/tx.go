@@ -3,7 +3,8 @@ package models
 import "time"
 
 type Tx struct {
-	Operation  int       `json:"operation"`
+	ID         int64     `json:"id" gorm:"AUTO_INCREMENT;primary_key"`
+	Operation  string    `json:"operation"`
 	DomainName string    `json:"domain_name"`
 	By         string    `json:"by"`
 	Nonce      string    `json:"nonce"`

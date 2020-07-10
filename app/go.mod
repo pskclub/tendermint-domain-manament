@@ -9,4 +9,5 @@ require (
 	github.com/satori/go.uuid v1.2.0
 	github.com/spf13/viper v1.6.3
 	github.com/tendermint/tendermint v0.32.8
+	gopkg.in/asaskevich/govalidator.v9 v9.0.0-20180315120708-ccb8e960c48f
 )

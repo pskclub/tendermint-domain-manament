@@ -32,6 +32,10 @@ func checkTX(app *Application, req types.RequestCheckTx) types.ResponseCheckTx {
 
 	if utils.IsEmpty(data.Operation) {
 		return types.ResponseCheckTx{Code: code.CodeTypeEncodingError, Log: "Operation is required"}
+	} else {
+		if _, err := utils.IsStrIn(&data.Operation, "X|X2|X3", "Operation"); err != nil {
+			return types.ResponseCheckTx{Code: code.CodeTypeEncodingError, Log: err.Error()}
+		}
 	}
 
 	checkNonce := &models.Tx{}

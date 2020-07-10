@@ -7,7 +7,6 @@ import (
 	"github.com/tendermint/tendermint/abci/example/code"
 	"github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/libs/common"
-	"strconv"
 	"time"
 )
 
@@ -21,7 +20,7 @@ func deliverTX(app *Application, req types.RequestDeliverTx) types.ResponseDeliv
 			Attributes: []common.KVPair{
 				{
 					Key:   []byte("operation"),
-					Value: []byte(strconv.Itoa(tx.Operation)),
+					Value: []byte(tx.Operation),
 				},
 				{
 					Key:   []byte("domain_name"),
