@@ -9,7 +9,7 @@ type Tx struct {
 	Owner      string    `json:"owner"`
 	Receiver   *string   `json:"receiver"`
 	Nonce      string    `json:"nonce"`
-	CreatedAt  time.Time `json:"created_at"`
+	Timestamp  time.Time `json:"timestamp"`
 }
 
 func (Tx) TableName() string {

@@ -8,7 +8,7 @@ import (
 
 func saveState(app *Application) {
 	txs := make([]models.Tx, 0)
-	app.DB.Where("created_at=''").Find(&txs)
+	app.DB.Where("timestamp=''").Find(&txs)
 	for _, item := range txs {
 		txSearch := &models.TxSearchResponse{}
 		r, err := app.Requester.Get(fmt.Sprintf(
@@ -27,10 +27,8 @@ func saveState(app *Application) {
 				fmt.Println(errors.New("req2 error"))
 			}
 
-			fmt.Println(txSearch.Result.Txs[0].Height)
-
 			r2.ToJSON(blockSearch)
-			item.CreatedAt = blockSearch.Result.Block.Header.Time
+			item.Timestamp = blockSearch.Result.Block.Header.Time
 			app.DB.Save(item)
 		}
 	}
