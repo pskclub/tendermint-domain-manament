@@ -82,7 +82,11 @@ func checkTX(app *Application, req types.RequestCheckTx) types.ResponseCheckTx {
 			return types.ResponseCheckTx{Code: code.CodeTypeUnknownError, Log: result.Error.Error()}
 		}
 
-		if data.Owner == find.Owner && data.Owner != utils.GetString(find.Receiver) && (find.Operation == OperationTransfer || find.Operation == OperationReserve) {
+		if find.Operation == OperationTransfer && data.Owner == utils.GetString(find.Receiver) {
+			return types.ResponseCheckTx{Code: code.CodeTypeOK, Log: utils.StructToString(data)}
+		}
+
+		if find.Operation == OperationReserve && data.Owner == find.Owner {
 			return types.ResponseCheckTx{Code: code.CodeTypeOK, Log: utils.StructToString(data)}
 		}
 
