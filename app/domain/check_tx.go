@@ -18,8 +18,8 @@ func checkTX(app *Application, req types.RequestCheckTx) types.ResponseCheckTx {
 		return types.ResponseCheckTx{Code: code.CodeTypeEncodingError, Log: err.Error()}
 	}
 
-	if utils.IsEmpty(data.By) {
-		return types.ResponseCheckTx{Code: code.CodeTypeEncodingError, Log: "by is required"}
+	if utils.IsEmpty(data.Owner) {
+		return types.ResponseCheckTx{Code: code.CodeTypeEncodingError, Log: "owner is required"}
 	}
 
 	if utils.IsEmpty(data.DomainName) {
@@ -31,18 +31,18 @@ func checkTX(app *Application, req types.RequestCheckTx) types.ResponseCheckTx {
 	}
 
 	if utils.IsEmpty(data.Operation) {
-		return types.ResponseCheckTx{Code: code.CodeTypeEncodingError, Log: "Operation is required"}
+		return types.ResponseCheckTx{Code: code.CodeTypeEncodingError, Log: "operation is required"}
 	} else {
-		if _, err := utils.IsStrIn(&data.Operation, "reserve|release|transfer", "Operation"); err != nil {
+		if _, err := utils.IsStrIn(&data.Operation, "reserve|release|transfer", "operation"); err != nil {
 			return types.ResponseCheckTx{Code: code.CodeTypeEncodingError, Log: err.Error()}
 		}
 	}
 
 	checkNonce := &models.Tx{}
-	result := app.db.Where("nonce = ?", data.Nonce).Find(checkNonce)
+	result := app.DB.Where("nonce = ?", data.Nonce).Find(checkNonce)
 	if result.Error != nil && gorm.IsRecordNotFoundError(result.Error) {
 		return types.ResponseCheckTx{Code: code.CodeTypeOK, Log: fmt.Sprintf("%v", data)}
 	}
 
-	return types.ResponseCheckTx{Code: code.CodeTypeBadNonce, Log: "Nonce already exits"}
+	return types.ResponseCheckTx{Code: code.CodeTypeBadNonce, Log: "nonce already exits"}
 }

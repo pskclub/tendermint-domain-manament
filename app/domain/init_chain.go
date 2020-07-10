@@ -8,7 +8,7 @@ import (
 
 func initChain(app *Application, req types.RequestInitChain) types.ResponseInitChain {
 	fmt.Println("initChain....")
-	app.db.AutoMigrate(&models.Tx{})
-	app.db.Delete(&models.Tx{})
+	app.DB.AutoMigrate(&models.Tx{})
+	app.DB.Delete(&models.Tx{})
 	return types.ResponseInitChain{}
 }

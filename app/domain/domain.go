@@ -8,12 +8,14 @@ import (
 type Application struct {
 	types.BaseApplication
 
-	hashCount int
-	db        *gorm.DB
+	Size   int
+	Hash   []byte
+	Height int64
+	DB     *gorm.DB
 }
 
 func NewApplication(db *gorm.DB) *Application {
-	return &Application{db: db}
+	return &Application{DB: db}
 }
 
 func (app *Application) SetOption(req types.RequestSetOption) types.ResponseSetOption {

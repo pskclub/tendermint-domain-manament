@@ -12,11 +12,11 @@ func IsStrIn(input *string, rules string, fieldPath string) (bool, error) {
 	}
 
 	split := strings.Split(rules, "|")
-	msg := strings.Join(split, ", ")
 
 	if govalidator.IsIn(*input, split...) {
 		return true, nil
 	}
-	return false, errors.New("The " + fieldPath + " field must be one of " + msg)
+
+	return false, errors.New("The " + fieldPath + " field must be one of " + strings.Join(split, ", "))
 
 }

@@ -7,5 +7,9 @@ import (
 
 func info(app *Application, req types.RequestInfo) types.ResponseInfo {
 	fmt.Println("info...")
-	return types.ResponseInfo{Data: fmt.Sprintf("{\"hashes\":%v,\"txs\":%v}", app.hashCount, 0)}
+	return types.ResponseInfo{
+		Data:             fmt.Sprintf("{\"size\":%v}", app.Size),
+		LastBlockHeight:  app.Height,
+		LastBlockAppHash: app.Hash,
+	}
 }

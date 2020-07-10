@@ -6,7 +6,8 @@ type Tx struct {
 	ID         int64     `json:"id" gorm:"AUTO_INCREMENT;primary_key"`
 	Operation  string    `json:"operation"`
 	DomainName string    `json:"domain_name"`
-	By         string    `json:"by"`
+	Owner      string    `json:"owner"`
+	Receiver   *string   `json:"receiver"`
 	Nonce      string    `json:"nonce"`
 	CreatedAt  time.Time `json:"created_at"`
 }

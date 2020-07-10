@@ -27,8 +27,12 @@ func deliverTX(app *Application, req types.RequestDeliverTx) types.ResponseDeliv
 					Value: []byte(tx.DomainName),
 				},
 				{
-					Key:   []byte("by"),
-					Value: []byte(tx.By),
+					Key:   []byte("owner"),
+					Value: []byte(tx.Owner),
+				},
+				{
+					Key:   []byte("receiver"),
+					Value: []byte(utils.GetString(tx.Receiver)),
 				},
 				{
 					Key:   []byte("nonce"),
@@ -39,7 +43,9 @@ func deliverTX(app *Application, req types.RequestDeliverTx) types.ResponseDeliv
 	}
 
 	tx.CreatedAt = time.Now()
-	app.db.Create(tx)
+	app.DB.Create(tx)
 	utils.LogStruct(tx)
+
+	app.Size++
 	return types.ResponseDeliverTx{Code: code.CodeTypeOK, Events: events}
 }
