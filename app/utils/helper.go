@@ -13,13 +13,16 @@ func IsEmpty(x interface{}) bool {
 	return reflect.DeepEqual(x, reflect.Zero(reflect.TypeOf(x)).Interface())
 }
 
-func StructToString(v interface{}) (string, error) {
+func StructToString(v interface{}) string {
 	value, err := json.MarshalIndent(v, "", " ")
-	return string(value), err
+	if err != nil {
+		return ""
+	}
+	return string(value)
 }
 
 func LogStruct(v interface{}) {
-	value, _ := StructToString(v)
+	value := StructToString(v)
 	fmt.Println(value)
 }
 

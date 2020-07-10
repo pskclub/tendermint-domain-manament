@@ -8,9 +8,9 @@ import (
 type Application struct {
 	types.BaseApplication
 
-	Size   int
-	Hash   []byte
-	Height int64
+	Size   int64  `json:"size"`
+	Hash   []byte `json:"hash"`
+	Height int64  `json:"height"`
 	DB     *gorm.DB
 }
 

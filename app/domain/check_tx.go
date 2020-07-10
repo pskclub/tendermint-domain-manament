@@ -9,12 +9,15 @@ import (
 	"github.com/tendermint/tendermint/abci/types"
 )
 
+func validateInput() {
+
+}
+
 func checkTX(app *Application, req types.RequestCheckTx) types.ResponseCheckTx {
 	fmt.Println("checkTX...")
 	data := &models.Tx{}
 	err := utils.JSONParse(req.Tx, data)
 	if err != nil {
-		fmt.Println(err.Error())
 		return types.ResponseCheckTx{Code: code.CodeTypeEncodingError, Log: err.Error()}
 	}
 
@@ -40,9 +43,13 @@ func checkTX(app *Application, req types.RequestCheckTx) types.ResponseCheckTx {
 
 	checkNonce := &models.Tx{}
 	result := app.DB.Where("nonce = ?", data.Nonce).Find(checkNonce)
-	if result.Error != nil && gorm.IsRecordNotFoundError(result.Error) {
-		return types.ResponseCheckTx{Code: code.CodeTypeOK, Log: fmt.Sprintf("%v", data)}
+	if result.Error == nil {
+		return types.ResponseCheckTx{Code: code.CodeTypeBadNonce, Log: "nonce already exits"}
+	} else {
+		if !gorm.IsRecordNotFoundError(result.Error) {
+			return types.ResponseCheckTx{Code: code.CodeTypeUnknownError, Log: result.Error.Error()}
+		}
 	}
 
-	return types.ResponseCheckTx{Code: code.CodeTypeBadNonce, Log: "nonce already exits"}
+	return types.ResponseCheckTx{Code: code.CodeTypeOK, Log: utils.StructToString(data)}
 }
