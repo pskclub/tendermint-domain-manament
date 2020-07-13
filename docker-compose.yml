@@ -6,6 +6,8 @@ services:
     image: tendermint_abci
     container_name: tendermint_abci
     restart: always
+    volumes:
+      - ./app:/app
     ports:
       - 26658:26658
     depends_on:

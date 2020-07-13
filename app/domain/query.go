@@ -23,15 +23,9 @@ func queryTX(app *Application, req types.RequestQuery) types.ResponseQuery {
 			Log:   strconv.FormatInt(app.Height, 10),
 		}
 	case "owner":
-		return types.ResponseQuery{
-			Value: []byte(fmt.Sprintf("%v", app.Height)),
-			Log:   strconv.FormatInt(app.Height, 10),
-		}
+		return getUserHistory(app, req)
 	case "domain":
-		return types.ResponseQuery{
-			Value: []byte(fmt.Sprintf("%v", app.Height)),
-			Log:   strconv.FormatInt(app.Height, 10),
-		}
+		return getDomainHistory(app, req)
 	default:
 		return types.ResponseQuery{Log: fmt.Sprintf("Invalid query path. Expected Hash or tx, got %v", req.Path)}
 	}

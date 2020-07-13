@@ -14,7 +14,7 @@ func saveState(app *Application) {
 		r, err := app.Requester.Get(fmt.Sprintf(
 			"http://tendermint_core:26657/tx_search?query=\"app.nonce='%v'\"", item.Nonce))
 		if err != nil || r == nil {
-			fmt.Println(errors.New("req error"))
+			fmt.Println(errors.New("req error eieiei"))
 		}
 
 		r.ToJSON(txSearch)
