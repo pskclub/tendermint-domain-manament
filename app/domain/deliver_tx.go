@@ -14,6 +14,9 @@ func deliverTX(app *Application, req types.RequestDeliverTx) types.ResponseDeliv
 	fmt.Println("deliverTX...")
 	tx := &models.Tx{}
 	utils.JSONParse(req.Tx, tx)
+	if tx.DomainName == "kuy.com" {
+		return types.ResponseDeliverTx{Code: code.CodeTypeUnknownError}
+	}
 	events := []types.Event{
 		{
 			Type: "app",
